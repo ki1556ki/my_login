@@ -32,7 +32,7 @@ class Login extends React.Component{
     render () {
         return (
             <div>
-                <form action="index.html" className="login-form" >
+                <form action="./login" method="post" className="login-form" >
                     <h1>Login</h1>
     
                     <div className="txtb">
@@ -49,7 +49,7 @@ class Login extends React.Component{
                     <input type="submit" className="logbtn" value="Login" />
     
                     <div className="bottom-text">
-                        Don't have account? <a href="#">Sign up</a>
+                        Don't have account? <a href="./sign-up">Sign up</a>
                     </div>
                 </form>
             </div> 
