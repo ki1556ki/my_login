@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+
+      <form action="index.html" class="login-form">
+        <h1>Login</h1>
+
+        <div class="txtb">
+          <input type="text">
+          <span data-placeholder="Username"><br/></span>
+        </div>
+
+
+        <div class="txtb">
+          <input type="password">
+          <span data-placeholder="Password"><br/></span>
+        </div>
+
+        <input type="submit" class="logbtn" value="Login">
+
+        <div class="bottom-text">
+          Don't have account? <a href="#">Sign up</a>
+        </div>
+
+      </form>
+
+      <script>
+
+      document.getElementsByTagName('input')[0].addEventListener('focus', () => {
+        document.getElementsByTagName('input')[0].classList.add('focus')
+      })
+
+      document.getElementsByTagName('input')[1].addEventListener('focus', () => {
+        document.getElementsByTagName('input')[1].classList.add('focus')
+      })
+
+      document.getElementsByTagName('input')[0].addEventListener('blur', () => {
+        index = document.getElementsByTagName('input')[0]
+        if(index.value == ""){
+          index.classList.remove('focus')
+        }
+        
+      })
+      
+      document.getElementsByTagName('input')[1].addEventListener('blur', () => {
+        index = document.getElementsByTagName('input')[1]
+        if(index.value == ""){
+          index.classList.remove('focus')
+        }
+        
+      })
+
+      </script>
+      <!-- <script type="text/javascript">
+      $(".txtb input").on("focus",function(){
+        $(this).addClass("focus");
+      });
+
+      $(".txtb input").on("blur",function(){
+        if($(this).val() == "")
+        $(this).removeClass("focus");
+      });
+
+      </script> -->
+
+
+  </body>
+</html>
